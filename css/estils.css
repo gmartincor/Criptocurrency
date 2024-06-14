@@ -1,0 +1,222 @@
+/******* Colors i tipografia del tema
+ *******/
+ :root {
+    --main-color: rgb(36, 36, 36);
+    --contrast-color: rgb(191, 15, 60);
+    --light-color: rgb(255,255,255);
+    --bg-dark: rgb(0,0,0);
+    --sans-serif: Helvetica, Arial, sans-serif;
+    --serif: Georgia, 'Times New Roman', serif;
+ }
+
+/******* Regles per als elements 
+de les pàgines *******/
+*,
+*:before,
+*:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: var(--serif);
+    line-height: 1.6;
+    color: var(--main-color);
+}
+h1, h2 {
+    font-family: var(--sans-serif);
+}
+h1 {
+    font-size: 3.5rem;
+    text-align: center;
+    line-height: 1;
+    padding-bottom: 1rem;
+}
+h2 {
+    font-size: 2.5rem;
+    line-height: 1.1;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+blockquote {
+    width: 90%;
+    margin: 1rem auto;
+    padding: 2rem 1rem;
+    border-left: 8px solid var(--main-color);
+    border-top: 1px solid var(--main-color);
+    border-bottom: 1px solid var(--main-color);
+    border-right: 1px solid var(--main-color);
+}
+blockquote p {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0;
+    color: var(--contrast-color);
+}
+abbr {
+    text-decoration: none;
+}
+q {
+    quotes: "«" "»";
+}
+
+/* Enllaços */
+a {
+    color: var(--contrast-color);
+}
+a:hover {
+    text-decoration: none;
+}
+a[href^="http"]::after {
+  content: "";
+  width: 16px;
+  height: 16px;
+  margin-left: .25rem;
+  background-image: url(../img/external-link.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+
+/* Regles imatges i iframe 
+amb aquestes regles aconseguim que les imatges i els iframes adpatin la seva amplada al contenidor que ocupen */
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+iframe {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+    border: 0;
+}
+
+/******* Regles per al layout
+de les pàgines *******/
+header.header {
+    text-align: center;
+    padding-top: 2rem;
+}
+footer.footer {
+    background-color: var(--bg-dark);
+    padding: 2rem;
+    margin-top: 4rem;
+    text-align: center;
+}
+footer.footer p {
+    font-family: var(--sans-serif);
+    color: var(--light-color);
+    font-size: 0.8rem;
+    margin-bottom: 0.25rem;
+}
+.container {
+    width: 95%;
+    max-width: 850px;
+    margin-left: auto;
+    margin-right: auto;
+}
+figure {
+    text-align: center;
+}
+figcaption {
+    font-size: 0.7rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+/******* Regles menú per al menú
+de navegació  *******/
+nav {
+    font-family: var(--sans-serif);
+    padding-bottom: 1rem;
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-align: center;
+}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+nav a {
+    color: var(--main-color);
+    text-decoration: none;
+}
+nav a:hover {
+    color: var(--contrast-color);
+}
+nav a.current {
+    color: var(--contrast-color);
+}
+
+/******* Regles articles *******/
+article footer {
+    margin-top: 2rem;
+}
+article footer p {
+    font-family: var(--sans-serif);
+    font-size: 0.9rem;
+    margin-bottom: 0;
+}
+
+/******* Regles article
+pàgina d'inici  *******/
+article p.first {
+    margin-top: 3rem;
+}
+.meta p {
+    font-family: var(--sans-serif);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/******* Regles article 
+critpomonedes  *******/
+p.intro {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+article ol {
+    margin-left: 3rem;
+    font-size: 1.8rem;
+}
+article ol h2{
+    font-size: inherit;
+    font-family: inherit;
+    font-weight: normal;
+    margin-bottom:0;
+}
+article ol li {
+    margin-bottom: 0.5rem;
+}
+article ol ul {
+    margin-left: 3rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    list-style-type: square;
+}
+
+/******* Regles article 
+glossari *******/
+dt {
+    font-size: 1.75rem;
+    font-family: var(--sans-serif);
+    font-weight: 700;
+    margin-top: 1.5rem;
+    margin-bottom: .5rem;
+}
+dd {
+    border-left: 1px solid var(--main-color);
+    padding-left: 1rem;
+}
